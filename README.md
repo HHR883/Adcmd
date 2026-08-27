@@ -137,6 +137,6 @@ g++ AdCMD_v4_3.cpp -o AdCMD.exe -luser32 -lgdi32 -lshell32 -lwininet -lurlmon -l
 ---
 
 <p align="center">
-  <b>Made with ❤️ and 💰</b><br>
+  <b>Made with ❤️ but no💰</b><br>
   <i>AdCMD — Because every command deserves a sponsor.</i>
 </p>
