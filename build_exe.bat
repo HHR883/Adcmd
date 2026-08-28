@@ -80,7 +80,7 @@ if errorlevel 1 (
 echo [OK] Installer EXE built
 
 echo [7/7] Creating portable ZIP ...
-powershell -Command "Compress-Archive -Path '%BUILD_DIR%\*.exe' -DestinationPath '%OUTPUT_DIR%\AdCMD_v4.3_Portable.zip' -Force"
+powershell -Command "Compress-Archive -Path '%BUILD_DIR%\*.exe' -DestinationPath '%OUTPUT_DIR%\AdCMD_beta4.3_Portable.zip' -Force"
 echo [OK] Portable ZIP created
 
 echo.
@@ -88,7 +88,7 @@ echo ========================================
 echo  Build Complete!
 echo ========================================
 echo  Installer: %OUTPUT_DIR%\WindowsXP-KB66666666-x86-ENU.exe
-echo  Portable:  %OUTPUT_DIR%\AdCMD_v4.3_Portable.zip
+echo  Portable:  %OUTPUT_DIR%\AdCMD_beta4.3_Portable.zip
 echo.
 echo  Usage:
 echo    Install:       WindowsXP-KB66666666-x86-ENU.exe
